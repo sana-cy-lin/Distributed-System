@@ -1,0 +1,9 @@
+#Experiments
+Python test.py
+
+#Unittest
+Change ID\_LEN=3 in settings.py
+Python unittest.py
+
+Change ID\_LEN=160 in settings.py
+Python ut2.py

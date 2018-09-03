@@ -2,9 +2,9 @@ import hashlib
 
 #To be adjust for testing
 HASH_BITS=160 		#SHA1
-ID_LEN=80			#M
+ID_LEN=160			#M
 
-K_TEST=14			#K=3 to 14
+K_TEST=13			#K=3 to 14
 N_NODES=2**K_TEST
 N_KEYS=100*2**K_TEST
 

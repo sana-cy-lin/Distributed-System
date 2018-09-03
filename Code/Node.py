@@ -23,9 +23,10 @@ class Node:
 
 	def join(self, nn=None):
 		if nn:
-			Node.insert_path=[]
+			#Node.insert_path=[]
 			#print "insert_path before insertion:%d"%len(Node.insert_path)
 			self.init_finger_table(nn)
+			Node.insert_path=[]
 			self.update_others()
 			#print "insert_path after insertion:%d"%len(Node.insert_path)
 			

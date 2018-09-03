@@ -1,5 +1,5 @@
-folder="C:/Users/chili83/Dropbox/COURSE/Distributed Systems"
-setwd(folder)
+folder="C:/Users/chili83/Desktop/Distributed Systems/Results"
+
 
 path<-paste(folder,"resLookUp.csv",sep="/")
 data<-read.csv(path,header=FALSE,stringsAsFactors = FALSE)
@@ -57,15 +57,15 @@ path<-paste(folder,"resInsertion.csv",sep="/")
 data<-read.csv(path,header=FALSE,stringsAsFactors = FALSE)
 rows.nor=list(as.numeric(data[1,-1]),as.numeric(data[2,-1]),as.numeric(data[3,-1]),as.numeric(data[4,-1]),as.numeric(data[5,-1]),as.numeric(data[6,-1]),as.numeric(data[7,-1]),as.numeric(data[8,-1]),as.numeric(data[9,-1]),as.numeric(data[10,-1]),as.numeric(data[11,-1]),as.numeric(data[12,-1]))
 res.insert2=lapply(rows.nor,quantile,c(.01,.5,.99),na.rm = TRUE)
-boxplot(res.insert, names=c(3:14),xlab="k",ylab="path length", col="grey")
-
-# x=c(3:14)
-# y=16*(log2(2**x))**2
-# lines(y,col="green")
+boxplot(res.insert2, names=c(3:14),xlab="k",ylab="path length", col="grey")
 
 x=c(3:14)
-y=135*log2(2**x)
+y=4.5*(log2(2**x))**2+200
 lines(y,col="red")
+
+#x=c(3:14)
+#y=130*log2(2**x)
+#lines(y,col="red")
 
 # x=c(3:14)
 # y=250*log2(log2(2**x))
